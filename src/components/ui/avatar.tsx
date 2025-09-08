@@ -1,3 +1,4 @@
+// src/ui/avatar.tsx
 "use client"
 
 import * as React from "react"
@@ -12,7 +13,8 @@ const Avatar = React.forwardRef<
   <AvatarPrimitive.Root
     ref={ref}
     className={cn(
-      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
+      // ubah rounded-full jadi rounded-none atau rounded-sm sesuai selera
+      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-sm",
       className
     )}
     {...props}
@@ -26,7 +28,8 @@ const AvatarImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
     ref={ref}
-    className={cn("aspect-square h-full w-full", className)}
+    // pastikan aspect-square/full untuk memenuhi kotak
+    className={cn("aspect-square h-full w-full object-cover", className)}
     {...props}
   />
 ))
@@ -39,7 +42,7 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      "flex h-full w-full items-center justify-center rounded-sm bg-muted text-sm font-medium",
       className
     )}
     {...props}
