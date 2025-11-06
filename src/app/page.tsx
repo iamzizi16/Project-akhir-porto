@@ -1,3 +1,5 @@
+"use client";
+
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -8,37 +10,120 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import MyTiltAvatar from "@/components/MyTiltAvatar";
+
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 flex justify-between">
-            <div className="flex-col flex flex-1 space-y-1.5">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
-              />
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
-            </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
-          </div>
-        </div>
-      </section>
+      <section id="hero" className="relative flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto px-6 py-20 gap-10">
+  <div className="flex-1 space-y-6 text-center md:text-left relative overflow-hidden">
+  {/* ✦ Background animasi highlight ✦ */}
+  <svg
+    className="absolute -top-8 -left-16 w-80 h-40 opacity-60 pointer-events-none animate-[float_6s_ease-in-out_infinite]"
+    viewBox="0 0 200 100"
+    fill="none"
+  >
+    <ellipse
+      cx="100"
+      cy="55"
+      rx="90"
+      ry="28"
+      fill="url(#ovalGrad)"
+      opacity="0.4"
+      filter="url(#blur)"
+    />
+    <defs>
+      <radialGradient id="ovalGrad" cx="50%" cy="50%" r="60%">
+        <stop offset="0%" stopColor="#60a5fa" />
+        <stop offset="50%" stopColor="#93c5fd" />
+        <stop offset="100%" stopColor="#e0f2fe" />
+      </radialGradient>
+      <filter id="blur">
+        <feGaussianBlur stdDeviation="12" />
+      </filter>
+    </defs>
+  </svg>
+
+  {/* ✦ Nama Rifky Febrian ✦ */}
+  <h1
+    className="relative z-10 text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight 
+    text-transparent bg-clip-text
+    bg-[length:300%_300%]
+    animate-gradientSpin
+    dark:drop-shadow-[0_0_20px_rgba(100,180,255,0.4)]
+    drop-shadow-[0_0_6px_rgba(0,0,0,0.15)]"
+    style={{
+      backgroundImage:
+        "linear-gradient(270deg, #007bff, #00e0ff, #b66dff, #ff7de9, #007bff)",
+    }}
+  >
+    Hi, I'm{" "}
+    <span className="text-transparent bg-clip-text animate-gradientSpin font-extrabold">
+      {DATA.name.split(" ")[0]}
+    </span>{" "}
+    👋
+  </h1>
+
+  {/* ✦ Deskripsi ✦ */}
+  <p className="text-muted-foreground text-lg max-w-md mx-auto md:mx-0 relative z-10">
+    {DATA.description}
+  </p>
+
+  {/* ✦ Tombol Aksi ✦ */}
+  <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4 relative z-10">
+    <a
+      href="/cv.pdf"
+      download
+      className="px-6 py-3 rounded-full font-semibold bg-[#2563eb] text-white shadow-[0_0_15px_rgba(37,99,235,0.6)] hover:shadow-[0_0_25px_rgba(37,99,235,0.8)] hover:scale-[1.05] transition-all duration-300"
+    >
+      Download CV
+    </a>
+    <a
+      href="#projects"
+      className="px-6 py-3 rounded-full font-semibold border border-[#2563eb] text-[#2563eb] dark:text-[#93c5fd] hover:bg-[#2563eb] hover:text-white transition-all duration-300"
+    >
+      See My Work
+    </a>
+  </div>
+
+  {/* ✦ Animasi Gradient ✦ */}
+  <style jsx>{`
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+    @keyframes gradientSpin {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .animate-gradientSpin {
+      animation: gradientSpin 6s ease-in-out infinite;
+    }
+  `}</style>
+</div>
+
+  {/* Kanan: avatar */}
+<div className="flex justify-center md:justify-end flex-1">
+  <MyTiltAvatar />
+</div>
+
+</section>
+
+
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>

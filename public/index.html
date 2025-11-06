@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+import random
+
+# ANSI color codes
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+CYAN = "\033[96m"
+RESET = "\033[0m"
+
+def main():
+    print(f"{CYAN}🎲 Selamat datang di Game Tebak Angka! 🎲{RESET}")
+    print("Saya menyimpan angka rahasia antara 1 dan 100.")
+    
+    angka_rahasia = random.randint(1, 100)
+    tebakan = None
+    percobaan = 0
+
+    while tebakan != angka_rahasia:
+        try:
+            tebakan = int(input("Tebak angka: "))
+            percobaan += 1
+
+            if tebakan < angka_rahasia:
+                print(f"{YELLOW}Terlalu kecil! Coba lagi.{RESET}")
+            elif tebakan > angka_rahasia:
+                print(f"{RED}Terlalu besar! Coba lagi.{RESET}")
+            else:
+                print(f"{GREEN}🎉 Selamat! Kamu menebak dengan benar dalam {percobaan} percobaan! 🎉{RESET}")
+        except ValueError:
+            print(f"{RED}Input tidak valid. Masukkan angka ya!{RESET}")
+
+if __name__ == "__main__":
+    main()
