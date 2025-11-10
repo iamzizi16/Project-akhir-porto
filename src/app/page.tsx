@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import MyTiltAvatar from "@/components/MyTiltAvatar";
+import ProfileCard from "@/components/MyTiltAvatar";
 
 
 const BLUR_FADE_DELAY = 0.04;
@@ -116,10 +116,20 @@ export default function Page() {
   `}</style>
 </div>
 
-  {/* Kanan: avatar */}
-<div className="flex justify-center md:justify-end flex-1">
-  <MyTiltAvatar />
-</div>
+   
+  
+<ProfileCard
+  name="Rifky Febrian Iskandar"
+  title="Software Engineer"
+  handle="Fabian"
+  status="Online"
+  contactText="Contact Me"
+  avatarUrl="./fabian.png"
+  showUserInfo={true}
+  enableTilt={true}
+  enableMobileTilt={false}
+  onContactClick={() => console.log('Contact clicked')}
+/>
 
 </section>
 
