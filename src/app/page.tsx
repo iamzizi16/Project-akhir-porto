@@ -2,50 +2,50 @@
 
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
-import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import ProfileCard from "@/components/MyTiltAvatar";
-
+import GooeyNav from '@/components/ui/GooeyNav'
 
 const BLUR_FADE_DELAY = 0.04;
+const items = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Project", href: "/project" },
+];
 
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <section id="hero" className="relative flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto px-6 py-20 gap-10">
+    <div style={{
+  height: '60px',
+  position: 'relative',
+  
+  zIndex: 50,
+}}>
+  <GooeyNav
+    items={items}
+    particleCount={15}
+    particleDistances={[90, 10]}
+    particleR={100}
+    initialActiveIndex={0}
+    animationTime={600}
+    timeVariance={300}
+    colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+  />
+</div>
+      <section
+  id="hero"
+  className="relative w-full max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+>
   <div className="flex-1 space-y-6 text-center md:text-left relative overflow-hidden">
   {/* ✦ Background animasi highlight ✦ */}
-  <svg
-    className="absolute -top-8 -left-16 w-80 h-40 opacity-60 pointer-events-none animate-[float_6s_ease-in-out_infinite]"
-    viewBox="0 0 200 100"
-    fill="none"
-  >
-    <ellipse
-      cx="100"
-      cy="55"
-      rx="90"
-      ry="28"
-      fill="url(#ovalGrad)"
-      opacity="0.4"
-      filter="url(#blur)"
-    />
-    <defs>
-      <radialGradient id="ovalGrad" cx="50%" cy="50%" r="60%">
-        <stop offset="0%" stopColor="#60a5fa" />
-        <stop offset="50%" stopColor="#93c5fd" />
-        <stop offset="100%" stopColor="#e0f2fe" />
-      </radialGradient>
-      <filter id="blur">
-        <feGaussianBlur stdDeviation="12" />
-      </filter>
-    </defs>
-  </svg>
+  
 
   {/* ✦ Nama Rifky Febrian ✦ */}
   <h1
@@ -119,7 +119,7 @@ export default function Page() {
    
   
 <ProfileCard
-  name="Rifky Febrian Iskandar"
+  name="Rifky Febrian"
   title="Software Engineer"
   handle="Fabian"
   status="Online"

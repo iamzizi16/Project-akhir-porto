@@ -50,9 +50,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -63,8 +63,13 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
+            
+            {/* NAVBAR DI ATAS */}
             <Navbar />
+
+            {/* PAGE CONTENT */}
+            {children}
+
           </TooltipProvider>
         </ThemeProvider>
       </body>
