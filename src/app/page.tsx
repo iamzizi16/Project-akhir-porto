@@ -10,17 +10,19 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import ProfileCard from "@/components/MyTiltAvatar";
 import GooeyNav from '@/components/ui/GooeyNav'
+import SplashCursor from '@/components/SplashCursor'
+import RotatingText from '@/components/RotatingText'
 
 const BLUR_FADE_DELAY = 0.04;
 const items = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
   { label: "Project", href: "/project" },
 ];
 
 export default function Page() {
   return (
+  
     <main className="flex flex-col min-h-[100dvh] space-y-10">
     <div style={{
   height: '60px',
@@ -28,6 +30,7 @@ export default function Page() {
   
   zIndex: 50,
 }}>
+<SplashCursor />
   <GooeyNav
     items={items}
     particleCount={15}
@@ -128,7 +131,20 @@ export default function Page() {
   showUserInfo={true}
   enableTilt={true}
   enableMobileTilt={false}
-  onContactClick={() => console.log('Contact clicked')}
+  onContactClick={() => window.location.href = "mailto:rifky@example.com"}
+/>
+
+<RotatingText
+texts={['KREATIF', 'INOVATIF', 'KEREN', 'PROFESIONAL']}
+  mainClassName="px-4 sm:px-6 md:px-8 bg-[#6933FF] text-white font-extrabold uppercase overflow-hidden py-1 sm:py-2 md:py-2 justify-center rounded-xl shadow-[0_0_20px_rgba(105,51,255,0.6)] tracking-wide"
+  staggerFrom="last"
+  initial={{ y: "100%" }}
+  animate={{ y: 0 }}
+  exit={{ y: "-120%" }}
+  staggerDuration={0.025}
+  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+  rotationInterval={2000}
 />
 
 </section>

@@ -10,7 +10,8 @@ export const DATA = {
   description:
     "Information & Network Systems Student with a focus on Web Development and System Administration. build practical digital projects and enjoy learning new technologies..",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "Hey! I’m Rifky, a student in SIJA (Information Systems, Networks, and Applications). Honestly, I’m not that into coding — I prefer planting and taking care of plants. It’s just more relaxing and fun for me. I also like joining organizations, meeting new people, and working on cool stuff together. Oh, and I can speak a bit of Japanese, just the basic stuff though 😅.",
+  
   avatarUrl: "/fabian.png",
   skills: [
     "React",
@@ -35,28 +36,28 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "h",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "h",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://dub.sh/dillion-twitter",
+        url: "h",
         icon: Icons.x,
 
         navbar: true,
       },
       Youtube: {
         name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
+        url: "h",
         icon: Icons.youtube,
         navbar: true,
       },

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import '@/components/ui/GooeyNav.css';
 
 interface GooeyNavItem {
