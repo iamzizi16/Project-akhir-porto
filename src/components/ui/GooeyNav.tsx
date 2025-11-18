@@ -28,6 +28,10 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
   colors = [1, 2, 3, 1, 2, 3, 1, 4],
   initialActiveIndex = 0
 }) => {
+
+  const pathname = usePathname();
+
+
   const containerRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLUListElement>(null);
   const filterRef = useRef<HTMLSpanElement>(null);
@@ -167,8 +171,15 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     resizeObserver.observe(containerRef.current);
     return () => resizeObserver.disconnect();
   }, [activeIndex]);
-
+  useEffect(() => {
+    const index = items.findIndex(item => item.href === pathname);
+    if (index !== -1) {
+      setActiveIndex(index);
+    }
+  }, [pathname, items]);
   return (
+  
+  
     <div className="gooey-nav-container" ref={containerRef}>
       <nav>
         <ul ref={navRef}>

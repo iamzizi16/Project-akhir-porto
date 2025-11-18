@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { DATA } from "@/data/resume";
 import GooeyNav from '@/components/ui/GooeyNav';
+import SplashCursor from '@/components/SplashCursor'
 
 const BLUR_FADE_DELAY = 0.04;
 const items = [
@@ -17,8 +18,19 @@ const items = [
 export default function Page() {
   return (
     <>
-      {/* 🔥 Tambahin ini */}
-      <GooeyNav items={items} />
+     
+
+    <SplashCursor />
+  <GooeyNav
+    items={items}
+    particleCount={15}
+    particleDistances={[90, 10]}
+    particleR={100}
+    initialActiveIndex={0}
+    animationTime={600}
+    timeVariance={300}
+    colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+  />
 
       <section id="projects">
         <div className="space-y-12 w-full py-12">
