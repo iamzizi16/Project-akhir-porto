@@ -52,23 +52,22 @@ export default function Page() {
 
   {/* ✦ Nama Rifky Febrian ✦ */}
   <h1
-    className="relative z-10 text-5xl sm:text-6xl font-extrabold tracking-tight leading-tight 
-    text-transparent bg-clip-text
-    bg-[length:300%_300%]
-    animate-gradientSpin
-    dark:drop-shadow-[0_0_20px_rgba(100,180,255,0.4)]
-    drop-shadow-[0_0_6px_rgba(0,0,0,0.15)]"
-    style={{
-      backgroundImage:
-        "linear-gradient(270deg, #007bff, #00e0ff, #b66dff, #ff7de9, #007bff)",
-    }}
-  >
-    Hi, I'm{" "}
-    <span className="text-transparent bg-clip-text animate-gradientSpin font-extrabold">
-      {DATA.name.split(" ")[0]}
-    </span>{" "}
-    👋
-  </h1>
+  className="
+    relative z-10 
+    text-5xl sm:text-6xl lg:text-7xl 
+    font-extrabold tracking-tight leading-tight
+    text-gray-900 dark:text-white
+  "
+>
+  <span className="block text-xl sm:text-2xl font-light text-gray-600 dark:text-gray-400 mb-2">
+    Welcome to my portfolio
+  </span>
+
+  Hi, I’m{" "}
+  <span className="font-black text-gray-900 dark:text-white">
+    {DATA.name.split(" ")[0]}
+  </span>
+</h1>
 
   {/* ✦ Deskripsi ✦ */}
   <p className="text-muted-foreground text-lg max-w-md mx-auto md:mx-0 relative z-10">
@@ -93,30 +92,7 @@ export default function Page() {
   </div>
 
   {/* ✦ Animasi Gradient ✦ */}
-  <style jsx>{`
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-4px);
-      }
-    }
-    @keyframes gradientSpin {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-    .animate-gradientSpin {
-      animation: gradientSpin 6s ease-in-out infinite;
-    }
-  `}</style>
+  
 </div>
 
    
@@ -124,14 +100,14 @@ export default function Page() {
 <ProfileCard
   name="Rifky Febrian"
   title="Software Engineer"
-  handle="Fabian"
+  handle="Rifky"
   status="Online"
   contactText="Contact Me"
   avatarUrl="./fabian.png"
   showUserInfo={true}
   enableTilt={true}
   enableMobileTilt={false}
-  onContactClick={() => window.location.href = "mailto:rifky@example.com"}
+  onContactClick={() => window.location.href = "mailto:febrianrfiky590@gmail.com"}
 />
 
 <RotatingText

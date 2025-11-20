@@ -34,7 +34,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "h",
+        url: "https://github.com/iamzizi16",
         icon: Icons.github,
 
         navbar: true,
@@ -48,14 +48,14 @@ export const DATA = {
       },
       X: {
         name: "X",
-        url: "h",
+        url: "https://x.com/RifkyFe40920714",
         icon: Icons.x,
 
         navbar: true,
       },
       Instagram: {
         name: "Instagram",
-        url: "h",
+        url: "https://www.instagram.com/rifkyfbrn07/",
         icon: Icons.instagram,
         navbar: true,
       },
@@ -85,7 +85,7 @@ export const DATA = {
     {
       company: "OSIS SMK Ti Bazma",
       badges: [],
-      href: "https://shopify.com",
+      href: "https://smktibazma.sch.id/",
       location: "Remote",
       title: "Division Head",
       logoUrl: "/osis.png",
@@ -146,7 +146,7 @@ export const DATA = {
   education: [
     {
       school: "SMPN 5 Ciamis",
-      href: "/Logo_SMPN_5_Ciamis.png",
+      href: "https://id.wikipedia.org/wiki/SMP_Negeri_5_Ciamis",
       degree: "Junior High School",
       logoUrl: "/Logo_SMPN_5_Ciamis.png",
       start: "2020",
@@ -154,7 +154,7 @@ export const DATA = {
     },
     {
       school: "MTsN 15 Ciamis",
-      href: "https://uwaterloo.ca",
+      href: "https://www.mtsn15ciamis.sch.id/",
       degree: "Islamic Junior High School — Sports Class",
       logoUrl: "/mts.png",
       start: "2021",
@@ -162,7 +162,7 @@ export const DATA = {
     },
     {
       school: "SMK TI BAZMA",
-      href: "https://wlu.ca",
+      href: "https://smktibazma.sch.id/",
       degree: "Software & Networking (SIJA)",
       logoUrl: "/bazma.png",
       start: "2023",
