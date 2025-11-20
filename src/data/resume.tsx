@@ -19,10 +19,8 @@ export const DATA = {
     "Typescript",
     "Node.js",
     "Python",
-    "Go",
     "Postgres",
     "Docker",
-    "Kubernetes",
     "Java",
     "C++",
   ],
@@ -82,7 +80,7 @@ export const DATA = {
       start: "September 2023",
       end: "November 2025",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Contributed as an active member in the West Java Student Forum (FOSJABAR), helping organize regional student activities and school collaboration events. Assisted in documentation, coordination, and publication tasks during several programs and meetings. Developed teamwork, leadership, and communication skills through direct involvement in the organization.",
     },
     {
       company: "OSIS SMK Ti Bazma",
@@ -94,7 +92,7 @@ export const DATA = {
       start: "Spetember 2023",
       end: "Februari 2025",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Served as the head of a division in the student council (OSIS), responsible for planning, organizing, and managing school events. Led a small team to execute activities such as student gatherings, competitions, and social programs. Improved leadership, communication, and event-planning skills while maintaining coordination with teachers and fellow committee members.",
     },
     {
       company: "Nvidia",
@@ -166,7 +164,7 @@ export const DATA = {
       school: "SMK TI BAZMA",
       href: "https://wlu.ca",
       degree: "Software & Networking (SIJA)",
-      logoUrl: "/bazma.jpeg",
+      logoUrl: "/bazma.png",
       start: "2023",
       end: "Now",
     },
