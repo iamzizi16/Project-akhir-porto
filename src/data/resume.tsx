@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { ArrowUpRight, HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
   name: "Rifky Febrian Iskandar",
@@ -36,7 +36,7 @@ I also have experience in networking and cyber security fundamentals, including 
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/iamzizi16",
+        url: "https://github.com/rifkyfbrn07",
         icon: Icons.github,
 
         navbar: true,
@@ -247,6 +247,65 @@ I also have experience in networking and cyber security fundamentals, including 
   ],
   projects: [
     {
+      title: "BMPS Bogor",
+      href: "https://bmps-bogor-zeta.vercel.app/",
+      dates: "August 2026",
+      active: true,
+      description: `
+Digital platform for BMPS Daerah Bogor.
+
+The website provides information and services for the organization, including programs, news, training, education assistance, scholarship information, school and foundation directory, and school and foundation registration.
+`,
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL",
+      ],
+      links: [
+        {
+          type: "Live Website",
+          href: "https://bmps-bogor-zeta.vercel.app/",
+          icon: <ArrowUpRight className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/rifkyfbrn07/BMPS-bogor",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/bmps-bogor.png",
+      video: "",
+    },
+    {
+      title: "Wedding Web",
+      href: "https://github.com/rifkyfbrn07/wedding_web",
+      dates: "July 2026",
+      active: true,
+      description: `
+Wedding website project developed as a personal invitation and showcase page for a wedding event.
+`,
+      technologies: [
+        "Laravel",
+        "PHP",
+        "Vite",
+        "Tailwind CSS",
+        "Alpine.js",
+        "GSAP",
+      ],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/rifkyfbrn07/wedding_web",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/wedding-web.png",
+      video: "",
+    },
+    {
       title: "Portofolio",
       href: "https://rifkyfbrn07-porto.vercel.app/",
       dates: "Nov 2025",
@@ -276,7 +335,7 @@ Highlights:
       links: [
         {
           type: "Source",
-          href: "https://github.com/iamzizi16/Project-akhir-porto",
+          href: "https://github.com/rifkyfbrn07/Project-akhir-porto",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -286,7 +345,7 @@ Highlights:
     },
     {
       title: "IoT Monitoring Dashboard",
-      href: "https://github.com/iamzizi16/sensor-app",
+      href: "https://github.com/rifkyfbrn07/sensor-app",
       dates: "April 2026",
       active: true,
       description: `
@@ -326,7 +385,7 @@ Laravel MySQL MQTT PHP
       links: [
         {
           type: "Source",
-          href: "https://github.com/iamzizi16/sensor-app",
+          href: "https://github.com/rifkyfbrn07/sensor-app",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -335,7 +394,7 @@ Laravel MySQL MQTT PHP
     },
     {
       title: "mini-ecom",
-      href: "http://github.com/iamzizi16/mini-ecom",
+      href: "http://github.com/rifkyfbrn07/mini-ecom",
       dates: "September 2025",
       active: true,
       description: `
@@ -362,7 +421,7 @@ Highlights:
       links: [
         {
           type: "Source",
-          href: "http://github.com/iamzizi16/mini-ecom",
+          href: "http://github.com/rifkyfbrn07/mini-ecom",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -371,7 +430,7 @@ Highlights:
     },
     {
       title: "Weather app",
-      href: "https://github.com/iamzizi16/cuaca",
+      href: "https://github.com/rifkyfbrn07/cuaca",
       dates: "August 2025",
       active: true,
      description: `
@@ -398,7 +457,7 @@ Highlights:
       links: [
         {
           type: "Source",
-          href: "https://github.com/iamzizi16/cuaca",
+          href: "https://github.com/rifkyfbrn07/cuaca",
           icon: <Icons.github className="size-3" />,
         },
       ],
