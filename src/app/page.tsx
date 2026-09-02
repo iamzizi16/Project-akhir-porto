@@ -196,9 +196,9 @@ export default function Page() {
                 variants={fadeInUp}
                 className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mb-8"
               >
-                Saya adalah developer yang fokus membangun web application modern menggunakan{" "}
+                I am a developer focused on building modern web applications using{" "}
                 <span className="text-slate-900 font-semibold">Next.js</span>,{" "}
-                <span className="text-slate-900 font-semibold">Laravel</span>, dan teknologi web modern lainnya untuk menghadirkan antarmuka yang bersih, cepat, dan intuitif.
+                <span className="text-slate-900 font-semibold">Laravel</span>, and other modern web technologies to deliver clean, fast, and intuitive interfaces.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -432,13 +432,13 @@ export default function Page() {
               className="lg:col-span-6 space-y-6 text-slate-600 leading-relaxed text-base"
             >
               <p>
-                Saya mendalami jurusan <span className="font-semibold text-slate-900">Sistem Informatika, Jaringan, dan Aplikasi (SIJA)</span> dengan ketertarikan mendalam pada pengembangan web full-stack, arsitektur backend yang rapi, dan keamanan sistem.
+                I study <span className="font-semibold text-slate-900">Information Systems, Networking, and Applications (SIJA)</span> with a strong interest in full-stack web development, clean backend architecture, and system security.
               </p>
               <p>
-                Fokus utama saya adalah membangun aplikasi web modern menggunakan <span className="font-semibold text-slate-900">Next.js</span> dan <span className="font-semibold text-slate-900">Laravel</span>, mulai dari perancangan skema database relasional di MySQL, pembuatan RESTful API, hingga integrasi protokol komunikasi seperti MQTT untuk perangkat IoT.
+                My main focus is building modern web applications using <span className="font-semibold text-slate-900">Next.js</span> and <span className="font-semibold text-slate-900">Laravel</span>, starting from relational database design in MySQL, building RESTful APIs, and integrating communication protocols such as MQTT for IoT devices.
               </p>
               <p>
-                Selain coding web, saya memiliki dasar yang kuat dalam administrasi sistem Linux, konsep dasar computer networking, serta aktif melatih kemampuan problem-solving melalui kompetisi Capture The Flag (CTF).
+                Besides web development, I also have a solid foundation in Linux system administration, basic computer networking concepts, and active problem-solving practice through Capture The Flag (CTF) competitions.
               </p>
 
               {/* Core Pillars / Badges */}
